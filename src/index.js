@@ -1,32 +1,48 @@
 import style from './main.css';
-
-// This JS file houses the tab-switching logic to dynamically render the restraunt page
-
-//import blank from 'home.js';
-//import blank from 'contact.js';
-//import blank from 'menu.js';
-
-
-let header = document.querySelector("h1");
-let mainDiv = document.createElement("div");
-mainDiv.classList.add("new");
-
-document.appendChild("mainDiv");
+import loadHeader from './header' ;
+import renderHome from './home';
+import renderContact from './contact';
+import renderMenu from './menu';
+import html from "./temp.html";
 
 
-// some tabs to be built out in the future
-let tabs= Array.from(document.querySelectorAll(".tab")); 
+let content = document.querySelector("content");
+//console.log(content);
+document.body.append(loadHeader());
 
-//tabs.forEach( item => {
-//    item.addEventListener("click", tabSwitcher(e))
-//})
+//renderHome();
 
-/*
+let navElements = Array.from(document.querySelectorAll("nav-elements")); 
+/* 
+navElements.forEach(x => x.addEventListener("click", (e) => { 
+        clearContent();
+        if (e.target.innerText == "HOME" ) { 
+            renderHome()
+            console.log("routing to homepage")
+        }
+        else if (e.target.innerText == "CONTACT") {
+            renderContact();
+            console.log("routing to contact page")
+        } 
+        else if (e.target.innerText == "Menu") {
+            renderMenu();
+            console.log("routing to menu")
+        }
+        else {
+            console.log("ERROR!")
+        }
+    }
+)
+); 
+*/ 
+
+//console.log(navElements);
+
+
+
 function clearContent(){ 
-    mainDiv.styles="";
-    while (mainDiv.lastChild) { 
-         mainDiv.removeChild() 
+    document.styles="";
+    while (document.lastChild) { 
+         document.removeChild() 
     }
 }
-*/
-

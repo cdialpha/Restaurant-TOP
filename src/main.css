@@ -1,8 +1,52 @@
-* { 
-    border: 1px solid green;
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap'); 
+
+:root { 
+    --seashell: #e7d2cc;
+    --pewter: #B9B7BD;
+    --gray: #868B8E;
+    --ivory: #EEEDE7;
 }
 
-.new { 
-    background-color: red;
-    height: 100px;
+.nav { 
+    background-color: var(--ivory);
+    height: 5vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-element { 
+    padding: 5px 5px 5px 5px;
+    margin: 5px 5px 5px 5px;
+    background-color: var(--seashell);
+    border-radius: 5px;
+    justify-self: right;
+    font-size: 1em;
+}
+
+.nav-element:hover { 
+    transform: scale(1.1);
+}
+
+.header{ 
+border: 1px solid black;
+}
+
+.logo-div{ 
+border: 1px solid black;
+height: 50px;
+display: flex;
+
+}
+
+.title { 
+    align-self: center;
+    justify-self: right;
+
+}
+
+.logo { 
+    height: 40px;
+    width: 40px;
+    align-self: left;
+    padding: 5px 5px 5px 5px;
 }
