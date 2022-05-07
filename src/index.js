@@ -1,48 +1,50 @@
 import style from './main.css';
 import loadHeader from './header' ;
-import renderHome from './home';
-import renderContact from './contact';
-import renderMenu from './menu';
-import html from "./temp.html";
+import loadHome from './home';
+//import renderContact from './contact';
+import loadMenu from './menu';
+import html from './temp.html';
+//import clearContent from './clearContent'
 
 
-let content = document.querySelector("content");
-//console.log(content);
-document.body.append(loadHeader());
+let content = document.querySelector("#content");
 
-//renderHome();
+content.append(loadHeader());
+content.append(loadHome());
 
-let navElements = Array.from(document.querySelectorAll("nav-elements")); 
-/* 
+let navElements = Array.from(document.querySelectorAll(".nav-element")); 
+
+console.log(navElements);
+
 navElements.forEach(x => x.addEventListener("click", (e) => { 
+        console.log("clicked!");
         clearContent();
         if (e.target.innerText == "HOME" ) { 
-            renderHome()
-            console.log("routing to homepage")
+            content.append(loadHome());
         }
-        else if (e.target.innerText == "CONTACT") {
-            renderContact();
-            console.log("routing to contact page")
-        } 
-        else if (e.target.innerText == "Menu") {
-            renderMenu();
-            console.log("routing to menu")
+        //else if (e.target.innerText == "CONTACT") {
+        //    renderContact();
+        //    console.log("routing to contact page")
+        //} 
+        else if (e.target.innerText == "MENU") {
+            content.append(loadMenu());
         }
         else {
             console.log("ERROR!")
         }
+   
     }
 )
 ); 
-*/ 
 
 //console.log(navElements);
 
-
-
-function clearContent(){ 
-    document.styles="";
-    while (document.lastChild) { 
-         document.removeChild() 
+function clearContent() {
+    console.log(content);
+    content.style="";
+    while(content.children.length > 1){
+        content.children[1].remove();
     }
+    console.log("done")
 }
+

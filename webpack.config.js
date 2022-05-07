@@ -25,18 +25,9 @@ module.exports = {
         rules: [
             { test: /\.css$/, use:['style-loader', 'css-loader']},
             { test: /\.html$/i, loader: "html-loader"},
-            { test: /\.(svg|ico|png|jpg|jpeg|webp|gif)$/, type: 'asset/resource'},
-            {
-                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-                use: [
-                  {
-                    loader: 'file-loader',
-                    options: {
-                      name: '[name].[ext]',
-                      outputPath: 'fonts/'
-                    }
-                  }] 
-            }
+            { test: /\.(svg|ico|png|jpg|jpeg|webp|gif)$/, 
+                type:'asset/resource'
+             },
         ]
     }, 
 

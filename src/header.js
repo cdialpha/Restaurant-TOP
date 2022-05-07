@@ -8,6 +8,7 @@ headerElement.classList.add("header");
     
     let img =document.createElement("img");
     img.src = logo;
+    console.log(img);
     img.classList.add("logo");
     
     let headerTitle =  document.createElement("span")
@@ -22,11 +23,11 @@ headerElement.classList.add("header");
 
         let homeNav = document.createElement("span"); 
         homeNav.classList.add("nav-element");   
-        homeNav.innerText = "home";
+        homeNav.innerText = "HOME";
 
         let menuNav = document.createElement("span"); 
         menuNav.classList.add("nav-element");
-        menuNav.innerText = "menu";
+        menuNav.innerText = "MENU";
 
         let contactNav = document.createElement("span"); 
         contactNav.classList.add("nav-element");
